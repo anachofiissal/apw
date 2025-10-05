@@ -40,9 +40,8 @@ main {
   margin-bottom: 1rem;
 }
 
-.input-container input {
-  flex: 1; /* ocupa todo el espacio disponible */
-  min-width: 0; /* evita overflow */
+input {
+  flex: 1;
   padding: 12px 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -50,14 +49,13 @@ main {
   transition: 0.3s;
 }
 
-.input-container input:focus {
+input:focus {
   outline: none;
   border-color: #FF9800;
   box-shadow: 0 0 5px rgba(255,152,0,0.5);
 }
 
-.input-container button {
-  flex: 0 0 auto; /* tamaño automático según su contenido */
+button {
   padding: 12px 20px;
   border: none;
   background-color: #FF9800;
@@ -69,7 +67,7 @@ main {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.input-container button:hover {
+button:hover {
   background-color: #e68900;
   transform: translateY(-2px);
 }
@@ -80,7 +78,6 @@ ul {
   padding: 0;
   width: 100%;
   margin-top: 20px;
-  box-sizing: border-box; /* evita overflow */
 }
 
 li {
@@ -91,14 +88,8 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* permite que los botones bajen si no caben */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   animation: fadeIn 0.3s ease-in-out;
-}
-
-li span {
-  flex: 1 1 auto; /* ocupa espacio disponible */
-  word-break: break-word; /* evita overflow de palabras largas */
 }
 
 li span.completed {
@@ -110,11 +101,9 @@ li span.completed {
 li div {
   display: flex;
   gap: 5px;
-  flex-wrap: wrap; /* baja a otra línea si no caben */
 }
 
 li div button {
-  flex: 0 0 auto;
   padding: 5px 8px;
   border: none;
   border-radius: 5px;
@@ -155,11 +144,11 @@ footer {
     max-width: 95%;
   }
 
-  .input-container input {
+  input {
     font-size: 0.95rem;
   }
 
-  .input-container button {
+  button {
     padding: 10px 15px;
     font-size: 0.95rem;
   }
@@ -175,24 +164,12 @@ footer {
     flex-direction: column;
   }
 
-  .input-container input,
-  .input-container button {
+  input, button {
     width: 100%;
-  }
-
-  li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  li div {
-    width: 100%;
-    justify-content: flex-start;
-    margin-top: 5px;
   }
 
   li div button {
-    font-size: 0.8rem;
     padding: 4px 6px;
+    font-size: 0.8rem;
   }
 }
