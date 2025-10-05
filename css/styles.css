@@ -173,3 +173,18 @@ footer {
     font-size: 0.8rem;
   }
 }
+/* Ajuste del input para que sea más pequeño */
+@media (max-width: 400px) {
+  .input-container input {
+    width: 70%; /* ocupa solo el 70% del contenedor */
+    margin-bottom: 5px; /* espacio con el botón si baja */
+  }
+
+  .input-container button {
+    width: 28%; /* ocupa el resto del contenedor */
+  }
+}
+.input-container input {
+  max-width: 300px; /* no se haga demasiado ancho */
+}
+
