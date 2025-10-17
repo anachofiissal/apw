@@ -1,0 +1,173 @@
+/* Fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #FF9800;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input {
+  padding: 12px 15px;
+  width: 70%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #FF9800;
+  box-shadow: 0 0 5px rgba(255,152,0,0.5);
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #FF9800;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+  margin-left: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  background-color: #e68900;
+  transform: translateY(-2px);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 20px;
+}
+
+li {
+  background-color: #fff8e1;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+li:hover {
+  background-color: #ffe0b2;
+  transform: scale(1.02);
+}
+
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+  background-color: #fff3e0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Animación al agregar tarea */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+li {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  input {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 12px 15px;
+  }
+}
+li button {
+    margin-left: 5px;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+li button:hover {
+    opacity: 0.8;
+}
+
+li button:nth-child(2) { background-color: #4caf50; color: white; } /* ✔ */
+li button:nth-child(3) { background-color: #ffeb3b; color: #333; } /* ✏️ */
+li button:nth-child(4) { background-color: #f44336; color: white; } /* 🗑 */
+
+/* Botones de CRUD */
+li div button {
+    padding: 5px 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+/* Colores según función */
+li div button:nth-child(1) { background-color: #4caf50; color: white; } /* ✔ */
+li div button:nth-child(2) { background-color: #ffeb3b; color: #333; }   /* ✏️ */
+li div button:nth-child(3) { background-color: #f44336; color: white; }  /* 🗑 */
+
+li div button:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
+}
+
+/* Contenedor de botones */
+li div {
+    display: flex;
+    gap: 5px;
+}
+li span.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
